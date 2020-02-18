@@ -4,9 +4,9 @@ Gather Subdomains > convert to IP Address > Convert IP's to CIDR's > Convert CID
 
 Usage:
 
-chmod 777 cidr2domain.sh
+chmod 777 *
 
-./cidr2domain domain.com
+./cidr2domain.sh domain.com
 
 
 To Run in background
