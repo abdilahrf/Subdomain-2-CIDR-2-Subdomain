@@ -1,4 +1,6 @@
-#bash
+#!/bin/bash
+# Crated by @vijay922 - https://hackerconnected.wordpress.com
+
 curl -s  -X POST --data "url=$@&Submit1=Submit" https://suip.biz/?act=amass | grep $@ | cut -d ">" -f 2 | awk 'NF' | tee -a suip-amass-$@.txt 2> /dev/null
 
 curl -s  -X POST --data "url=$@&Submit1=Submit" https://suip.biz/?act=subfinder | grep $@ | cut -d ">" -f 2 | awk 'NF' | tee -a suip-subfinder-$@.txt 2> /dev/null
@@ -15,7 +17,7 @@ cat Subdomains-IPs.txt | while read line; do
     oc2=`echo "$line" | cut -d '.' -f 2`
     oc3=`echo "$line" | cut -d '.' -f 3`
     oc4=`echo "$line" | cut -d '.' -f 4`
-    echo "$oc1.$oc2.$oc3.0/24" >> IPs1.srt
+    echo "$oc1.$oc2.$oc3.1/24" >> IPs1.srt
 done
 
 sort -u IPs1.srt > CIDR-IPs.txt
