@@ -1,6 +1,7 @@
 # Subdomain-2-CIDR-2-Subdomain
-Gather Subdomains > convert to IP Address > Convert IP's to CIDR's > Convert CIDR's to Subdomains
 
+Gather Subdomains > convert to IP Address > Convert IP's to CIDR's > Convert CIDR's to Subdomains
+=================================================================================================
 
 Usage:
 
@@ -12,3 +13,14 @@ chmod 777 *
 To Run in background
 
 nohup ./cidr2domain.sh domain.com &
+
+
+CIDR's > Subdomains
+====================
+
+./cidr2subdomain.sh domain.com
+
+
+To Run in background
+
+nohup ./cidr2subdomain.sh domain.com &
